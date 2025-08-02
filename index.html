@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mensive Lily ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio elements for multiple songs -->
+    <audio id="backgroundMusic" loop>
+        <source src="AsItWas-Lofiline.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        <!-- Page 1: Welcome Message -->
+        <div class="carousel-page active" id="page1">
+            <div class="content">
+                <div class="heart-animation">💖</div>
+                <h1 class="main-title">Happy Mensive Lily</h1>
+                <p class="subtitle">Love you so much, from Krish</p>
+                <div class="date">26th April 2025</div>
+                <button class="next-btn" onclick="nextPage()">Next ❤️</button>
+            </div>
+            <div class="floating-hearts">
+                <span class="heart">💕</span>
+                <span class="heart">💖</span>
+                <span class="heart">💝</span>
+                <span class="heart">💗</span>
+                <span class="heart">💓</span>
+            </div>
+        </div>
+
+        <!-- Page 2: Love Message -->
+        <div class="carousel-page" id="page2">
+            <div class="content">
+                <div class="love-icon">🌹</div>
+                <h2 class="message-title">Thanks for everything and sorry for the bad, Love</h2>
+                <div class="romantic-text">
+                    <p>Every moment with you is precious</p>
+                    <p>You make my world complete</p>
+                </div>
+                <button class="next-btn" onclick="nextPage()">See Our Memory ❤️</button>
+            </div>
+            <div class="sparkles">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">⭐</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">⭐</span>
+            </div>
+        </div>
+
+        <!-- Page 3: Poem Image -->
+        <div class="carousel-page" id="page3">
+            <div class="content image-content">
+                <div class="image-container">
+                    <img src="poem.png" alt="Our Love Poem" class="poem-image">
+                </div>
+                <div class="page3-buttons">
+                    <button class="rain-btn" onclick="toggleRain()">Rain ☔</button>
+                    <button class="back-btn" onclick="goToFirst()">Back to Start ❤️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rain Effect -->
+    <div class="rain-container" id="rainContainer"></div>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" onclick="toggleMusic()">🎵</button>
+    </div>
+
+    <!-- Music Player Popup -->
+    <div class="music-player-popup" id="musicPlayerPopup">
+        <div class="music-player-content">
+            <div class="music-player-header">
+                <h3>Now Playing</h3>
+                <button class="close-btn" onclick="closeMusicPlayer()">×</button>
+            </div>
+            <div class="song-info">
+                <div class="song-title" id="currentSongTitle">As It Was - Lofi Version</div>
+                <div class="song-artist" id="currentSongArtist">Lofiline</div>
+            </div>
+            <div class="music-controls">
+                <button class="control-btn" onclick="previousSong()">⏮️</button>
+                <button class="control-btn play-pause-btn" id="playPauseBtn" onclick="togglePlayPause()">⏸️</button>
+                <button class="control-btn" onclick="nextSong()">⏭️</button>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">0:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
